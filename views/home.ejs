@@ -1,0 +1,24 @@
+
+  
+  <table class="table">
+    <thead class="thead-dark">
+      <!-- <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr> -->
+      <% Object.keys(data[0]).forEach((column) => { %>
+        <th><%= column %></th>
+      <% }); %>
+    </thead>
+    <tbody>
+      <% data.forEach((movies) => { %>
+        <tr>
+          <% Object.keys(movies).forEach((column) => { %>
+            <td><%= movies[column] %></td>
+          <% }); %>
+        </tr>
+        <% }); %>
+    </tbody>
+  </table>
